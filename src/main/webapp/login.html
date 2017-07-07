@@ -17,7 +17,7 @@
 		$("#login").click(function(event) {
 			var data = $("#loginform").serialize();
 			$.post("restservices/authentication", data, function(response) {
-				window.sessionStorage.setItem("sessionToken", response);
+				window.localStorage.setItem("sessionToken", response);
 				window.location.href = "weather.html";
 				console.log(response);
 			}).fail(function(jqXHR, textStatus, errorThrown) {
